@@ -25,7 +25,7 @@ def result(request):
     #cost = (allotment*initial)+ scommission + bcommission + ((allotment*initial - initial  - scommission - bcommission) * (Gain/100))
     profit = proceeds - cost
     return_on_investment = (profit/cost)*100
-    break_even = ((allotment*initial)-scommission-bcommission)/allotment
+    break_even = ((allotment*initial)-scommission-bcommission)/100
     output=['Symbol:', symbol , 'Proceeds:', proceeds , 'Cost:', cost ,'Profit:', profit ,'Return_on_investment:', return_on_investment, 'Break_even:', break_even]
     #names=['symbol','proceeds','cost','return_on_investment','break_even']
     return render(request,'ACTUAL/RESULT.html',{'outputs':output})
